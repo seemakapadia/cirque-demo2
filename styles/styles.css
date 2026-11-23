@@ -323,3 +323,84 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+/* ===== PASTE THIS BLOCK AT THE BOTTOM of styles/styles.css ===== */
+/* Cirque du Soleil demo theme - generated from https://www.cirquedusoleil.com/ on 2026-11-23. Demo use only. */
+/* No @import needed: the site names no font, so this uses Roboto (already loaded by the boilerplate) as a stand-in. */
+:root {
+  --background-color: #000000;   /* page background (black) */
+  --light-color: #191a1a;        /* dark charcoal panels (section style "highlight") */
+  --dark-color: #201910;         /* deep brown from the logo */
+  --text-color: #ffffff;         /* body text */
+  --link-color: #f2e7bb;         /* links + primary buttons (cream) */
+  --link-hover-color: #be9d67;   /* gold */
+  --body-font-family: roboto, roboto-fallback, arial, sans-serif;
+  --heading-font-family: roboto, roboto-fallback, arial, sans-serif;
+  --brand-primary: #f2e7bb;      /* cream button fill */
+  --brand-secondary: #201910;    /* deep brown */
+  --brand-accent: #be9d67;       /* gold headlines */
+}
+
+body { background-color: var(--background-color); color: var(--text-color); font-size: 16px; }
+
+/* headings: gold, bold, uppercase display style */
+main h1, main h2, main h3 {
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--brand-accent);
+}
+main h1 { font-size: 40px; line-height: 1.1; }
+main h2 { font-size: 30px; }
+main h3 { font-size: 20px; }
+main a:any-link { color: var(--link-color); }
+main a:hover { color: var(--link-hover-color); }
+
+/* header / nav */
+header nav, header .nav-wrapper { background-color: #000000; }
+header nav, header nav a:any-link { color: #ffffff; }
+header nav .nav-brand img { max-height: 40px; width: auto; }
+header nav .nav-tools a.button:any-link { background-color: var(--brand-primary); color: #000000; }
+
+/* buttons: pill shape, cream fill, dark text */
+main a.button:any-link, main button {
+  background-color: var(--brand-primary);
+  color: #000000;
+  border-radius: 999px;
+  font-family: var(--body-font-family);
+  font-weight: 700;
+}
+main a.button:hover, main a.button:focus, main button:hover { background-color: var(--link-hover-color); color: #000000; }
+main a.button.secondary { background-color: transparent; color: var(--brand-primary); border: 2px solid currentcolor; }
+
+/* hero */
+main .hero { min-height: 420px; }
+main .hero h1 { color: #ffffff; max-width: 14ch; }
+main .hero p { color: #ffffff; }
+main .hero::after { content: ''; position: absolute; inset: 0; background: rgb(0 0 0 / 35%); z-index: -1; }
+
+/* cards: dark charcoal panels */
+main .cards > ul > li {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--light-color);
+  box-shadow: 0 2px 12px rgb(0 0 0 / 40%);
+}
+main .cards .cards-card-body h3 { color: var(--brand-primary); }
+main .cards .cards-card-body p { color: #ffffff; }
+main .cards .cards-card-body em { color: var(--brand-accent); font-style: normal; font-size: 14px; text-transform: uppercase; }
+
+/* sections */
+main .section.highlight { background-color: var(--light-color); }
+main .section.dark { background-color: var(--brand-secondary); color: #ffffff; }
+main .section.dark h2, main .section.dark h3 { color: var(--brand-accent); }
+main .section.dark a:any-link { color: var(--brand-primary); }
+
+/* partner logos row */
+main .columns img[src*="partner-"] { max-height: 60px; width: auto; margin: 0 auto; }
+
+/* footer */
+footer, footer .footer > div { background-color: #000000; color: #ffffff; }
+footer a:any-link { color: #ffffff; }
+footer ul { list-style: none; padding: 0; }
+footer strong { color: var(--brand-accent); text-transform: uppercase; }
